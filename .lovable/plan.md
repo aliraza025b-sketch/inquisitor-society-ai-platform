@@ -23,6 +23,11 @@ Port the Material-style teal palette from the mockups into semantic tokens in `s
 - A server function streams responses from the Lovable AI Gateway with a system prompt scoping the assistant to the Inquisitors Society: opportunities, events, resources, membership, workshops. Out-of-scope questions get the mockup's fallback line: "I don't currently have verified information about this in the Inquisitors Society knowledge base. Try asking about opportunities, events, resources, membership, or society activities."
 - Chat UI built on AI Elements primitives (conversation, message, prompt input, loading shimmer), styled to match the mockup: teal user bubbles, plain assistant text, suggestion chips, and the "Answers are based on official Inquisitors Society information." footnote.
 - Conversation lives in page state for now (no accounts, no saved history).
+- Empty state matches the mockups: greeting card plus a grid of six category prompts (Opportunities, Events, Society, Membership, Resources, Workshops), each firing its example question.
+- Rich answers, not just text: when the assistant returns opportunities or events, it renders them as cards inside the reply — internship cards (role, organization, location, term, eligibility, deadline, bookmark, "View Details") and event cards (category tag, date, time, location, "Register Now") — plus resource shortcut rows like "Academic Archives". Implemented with a small tool/structured-output contract so the model emits card data the UI renders.
+- Follow-up suggestion chips appear under an answer ("Show eligibility requirements", "Show application details", "Find related opportunities").
+- Responsive: desktop is the full-page chat with the site header; on mobile it becomes the dedicated chat screen from the mockups (back arrow, "Inquisitor AI / University Society Assistant" title bar, overflow menu, safe-area padded composer). A floating "Ask Inquisitor AI" button on other pages links into it.
+- Composer supports text send with mic/attach buttons shown as inert affordances, timestamps on messages, and the trust footnote ("Inquisitor AI can make mistakes. Verify important information.").
 
 ## Technical notes
 
