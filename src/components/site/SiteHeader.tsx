@@ -10,12 +10,12 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-outline-variant/60 bg-surface/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex shrink-0 items-center">
           <img
             src={logoAsset.url}
             alt="Inquisitors Society logo"
-            className="h-12 w-auto max-w-[190px] object-contain sm:h-14"
+            className="h-14 w-auto max-w-[220px] object-contain sm:h-16"
           />
         </Link>
 
