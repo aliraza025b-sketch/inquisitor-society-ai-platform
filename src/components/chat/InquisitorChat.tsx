@@ -17,7 +17,7 @@ import {
 import { Shimmer } from "@/components/ai-elements/shimmer";
 import { EventCards, OpportunityCards, ResourceCards } from "@/components/chat/ChatCards";
 import { Icon } from "@/components/site/Icon";
-import markAsset from "@/assets/inquisitors-mark.png.asset.json";
+import botMarkAsset from "@/assets/inquisitors-bot-mark.png.asset.json";
 import { CHAT_CATEGORIES } from "@/lib/inquisitor";
 import type { EventCard, OpportunityCard, ResourceCard } from "@/lib/inquisitor";
 
@@ -81,9 +81,9 @@ export function InquisitorChat({ initialPrompt }: { initialPrompt?: string }) {
     <div className="flex h-[calc(100svh-4rem)] flex-col bg-surface">
       <div className="flex items-center gap-3 border-b border-outline-variant/60 bg-surface-container-low px-4 py-3 sm:px-6">
         <img
-          src={markAsset.url}
-          alt="Inquisitors Society logo"
-          className="size-10 object-contain"
+          src={botMarkAsset.url}
+          alt="Inquisitors Chatbot logo"
+          className="size-11 object-contain"
         />
         <div className="min-w-0">
           <p className="font-display text-sm font-bold text-on-surface">Inquisitor AI</p>
