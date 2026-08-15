@@ -1,19 +1,11 @@
 import { Link } from "@tanstack/react-router";
-
-import { Icon } from "./Icon";
+import logoAsset from "@/assets/inquisitors-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-outline-variant/60 bg-surface-container-low">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div className="flex items-center gap-2.5">
-          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Icon name="psychology" className="text-[18px]" filled />
-          </span>
-          <span className="font-display text-sm font-bold text-on-surface">
-            Inquisitors Society
-          </span>
-        </div>
+        <img src={logoAsset.url} alt="Inquisitors Society logo" className="h-10 w-auto" />
         <p className="text-sm text-on-surface-variant">
           © 2024 Inquisitors Society. Learn • Innovate • Create.
         </p>
