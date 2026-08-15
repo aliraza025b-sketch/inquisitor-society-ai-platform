@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Icon } from "@/components/site/Icon";
 import { PageShell } from "@/components/site/PageShell";
 import { SUGGESTED_QUERIES } from "@/lib/inquisitor";
+import markAsset from "@/assets/inquisitors-mark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,9 +32,11 @@ function Index() {
     <PageShell>
       <section className="border-b border-outline-variant/60 bg-surface-container-low">
         <div className="mx-auto w-full max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
-          <span className="mx-auto flex size-16 items-center justify-center rounded-3xl bg-primary text-primary-foreground">
-            <Icon name="psychology" className="text-[34px]" filled />
-          </span>
+          <img
+            src={markAsset.url}
+            alt="Inquisitors Society logo"
+            className="mx-auto h-20 w-auto object-contain"
+          />
           <h1 className="mt-7 font-display text-4xl font-extrabold tracking-tight text-on-surface sm:text-5xl">
             Meet Inquisitor AI
           </h1>
